@@ -1,0 +1,3 @@
+# Release assets are uploaded to GitHub Releases, not committed to this repo.
+/dist/
+/release-artifacts/
