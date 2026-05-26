@@ -11,7 +11,7 @@ Current release tag: `v1.1.0`
 
 ## Assets
 
-- macOS Apple Silicon DMG: `Axelera Wingman-1.1.0-macOS-arm64.dmg`
+- macOS Apple Silicon DMG: `Axelera.Wingman-1.1.0-macOS-arm64.dmg`
 - Linux Debian packages: `wingman_1.1.0_amd64.deb`,
   `wingman_1.1.0_arm64.deb`
 - Claude Code, Codex, and Gemini extension archives
