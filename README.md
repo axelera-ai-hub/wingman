@@ -7,25 +7,37 @@ repository contain this small metadata tree. Installable desktop packages,
 plugin bundles, checksums, SBOMs, and release manifests are attached to GitHub
 Releases as assets.
 
-Current release tag: `v1.1.0`
+Current release tag: `v1.2.0`
 
 ## Assets
 
-- macOS Apple Silicon DMG: `Axelera.Wingman-1.1.0-macOS-arm64.dmg`
-- Linux Debian packages: `wingman_1.1.0_amd64.deb`,
-  `wingman_1.1.0_arm64.deb`
+- macOS Apple Silicon DMG: `Axelera.Wingman-1.2.0-macOS-arm64.dmg`
+- Linux Debian packages: `wingman_1.2.0_amd64.deb`,
+  `wingman_1.2.0_arm64.deb`
 - Claude Code, Codex, and Gemini extension archives
-- `install-wingman.sh`, `SHA256SUMS`, `release-manifest.json`, and SBOM
+- Marketplace review payload:
+  `axelera-ai-wingman-1.2.0-public-repo.tar.gz`
+- `install-wingman.sh`, `SHA256SUMS`, `SHA256SUMS.sig`,
+  `axelera-wingman-release-public-key.asc`, `release-manifest.json`, and SBOM
 
 ## Install
 
-Download the assets from the GitHub Release for `v1.1.0`.
+Download the assets from the GitHub Release for `v1.2.0`.
 
-On Linux, verify `SHA256SUMS`, then install the package for your architecture:
+For marketplace review, extract
+`axelera-ai-wingman-1.2.0-public-repo.tar.gz`. The repository root and
+GitHub-generated source archives are intentionally metadata-only and are not the
+reviewable plugin payload.
+
+On Linux, download the package for your architecture, verify `SHA256SUMS` with
+`SHA256SUMS.sig`, then install with apt so dependencies are resolved in one
+transaction:
 
 ```bash
-sudo dpkg -i wingman_1.1.0_amd64.deb
-sudo apt-get install -f
+gpg --import axelera-wingman-release-public-key.asc
+gpg --verify SHA256SUMS.sig SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+sudo apt install ./wingman_1.2.0_amd64.deb
 ```
 
 Use the `arm64` package on ARM64 Linux systems.
