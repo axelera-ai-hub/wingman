@@ -7,27 +7,22 @@ repository contain this small metadata tree. Installable desktop packages,
 plugin bundles, checksums, SBOMs, and release manifests are attached to GitHub
 Releases as assets.
 
-Current release tag: `v1.3.1`
+Current release tag: `v1.4.0`
 
 ## Assets
 
-- macOS Apple Silicon DMG: `Axelera.Wingman-1.3.1-macOS-arm64.dmg`
-- Linux Debian packages: `wingman_1.3.1_amd64.deb`,
-  `wingman_1.3.1_arm64.deb`
-- Claude Code, Codex, and Gemini extension archives
-- Marketplace review payload:
-  `axelera-ai-wingman-1.3.1-public-repo.tar.gz`
+- Linux Debian packages: `wingman_1.4.0_amd64.deb`,
+  `wingman_1.4.0_arm64.deb`
 - `install-wingman.sh`, `SHA256SUMS`, `SHA256SUMS.sig`,
   `axelera-wingman-release-public-key.asc`, `release-manifest.json`, and SBOM
 
+Coming soon: the macOS app and the Claude Code, Codex, and Gemini plugin
+bundles ship in a later release. `SHA256SUMS`, the release manifests, and
+the SBOM cover exactly the assets attached to this release.
+
 ## Install
 
-Download the assets from the GitHub Release for `v1.3.1`.
-
-For marketplace review, extract
-`axelera-ai-wingman-1.3.1-public-repo.tar.gz`. The repository root and
-GitHub-generated source archives are intentionally metadata-only and are not the
-reviewable plugin payload.
+Download the assets from the GitHub Release for `v1.4.0`.
 
 Simple install on Ubuntu or Debian: download the `.deb` for your machine
 (`amd64` for Intel and AMD, `arm64` for ARM), double-click the downloaded
@@ -64,7 +59,7 @@ from this release, then run the entire fail-closed block as one command:
   [[ "$installer_hash" =~ ^[0-9a-f]{64}$ ]]
   test "$(sha256sum install-wingman.sh | awk '{ print tolower($1) }')" \
     = "$installer_hash"
-  bash ./install-wingman.sh --version 1.3.1
+  bash ./install-wingman.sh --version 1.4.0
 )
 ```
 
