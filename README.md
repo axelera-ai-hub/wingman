@@ -3,26 +3,30 @@
 This repository is the release-only distribution point for Axelera Wingman.
 
 It contains release metadata only. GitHub source archives for tags in this
-repository contain this small metadata tree. Installable desktop packages,
-plugin bundles, checksums, SBOMs, and release manifests are attached to GitHub
-Releases as assets.
+repository contain this small metadata tree. Linux desktop packages, checksums,
+SBOMs, and release manifests are attached to GitHub Releases as assets.
 
-Current release tag: `v1.6.0`
+Current release tag: `v1.6.1`
 
 ## Assets
 
-- Linux Debian packages: `wingman_1.6.0_amd64.deb`,
-  `wingman_1.6.0_arm64.deb`
+- Linux Debian packages: `wingman_1.6.1_amd64.deb`,
+  `wingman_1.6.1_arm64.deb`
 - `install-wingman.sh`, `SHA256SUMS`, `SHA256SUMS.sig`,
   `axelera-wingman-release-public-key.asc`, `release-manifest.json`, and SBOM
 
-Coming soon: the macOS app and the Claude Code, Codex, and Gemini plugin
-bundles ship in a later release. `SHA256SUMS`, the release manifests, and
-the SBOM cover exactly the assets attached to this release.
+`SHA256SUMS`, the release manifests, and the SBOM cover exactly the assets
+attached to this Linux release.
 
 ## Install
 
-Download the assets from the GitHub Release for `v1.6.0`.
+Download the assets from the GitHub Release for `v1.6.1`.
+
+> **Manual update from 1.6.0:** Version 1.6.1 is a manual update from 1.6.0.
+> Save your work and close every Wingman window before installing it. Version
+> 1.6.0 does not offer 1.6.1 in the title bar.
+> Version 1.6.2 is the first update that appears in the title bar after 1.6.1
+> is installed.
 
 Simple install on Ubuntu or Debian: download the `.deb` for your machine
 (`amd64` for Intel and AMD, `arm64` for ARM), double-click the downloaded
@@ -59,7 +63,7 @@ from this release, then run the entire fail-closed block as one command:
   [[ "$installer_hash" =~ ^[0-9a-f]{64}$ ]]
   test "$(sha256sum install-wingman.sh | awk '{ print tolower($1) }')" \
     = "$installer_hash"
-  bash ./install-wingman.sh --version 1.6.0
+  bash ./install-wingman.sh --version 1.6.1
 )
 ```
 
