@@ -6,12 +6,12 @@ It contains release metadata only. GitHub source archives for tags in this
 repository contain this small metadata tree. Linux desktop packages, checksums,
 SBOMs, and release manifests are attached to GitHub Releases as assets.
 
-Current release tag: `v1.7.2`
+Current release tag: `v1.7.3`
 
 ## Assets
 
-- Linux Debian packages: `wingman_1.7.2_amd64.deb`,
-  `wingman_1.7.2_arm64.deb`
+- Linux Debian packages: `wingman_1.7.3_amd64.deb`,
+  `wingman_1.7.3_arm64.deb`
 - `install-wingman.sh`, `SHA256SUMS`, `SHA256SUMS.sig`,
   `axelera-wingman-release-public-key.asc`, `release-manifest.json`, and SBOM
 
@@ -20,7 +20,7 @@ attached to this Linux release.
 
 ## Install
 
-Download the assets from the GitHub Release for `v1.7.2`.
+Download the assets from the GitHub Release for `v1.7.3`.
 
 
 
@@ -59,7 +59,7 @@ from this release, then run the entire fail-closed block as one command:
   [[ "$installer_hash" =~ ^[0-9a-f]{64}$ ]]
   test "$(sha256sum install-wingman.sh | awk '{ print tolower($1) }')" \
     = "$installer_hash"
-  bash ./install-wingman.sh --version 1.7.2
+  bash ./install-wingman.sh --version 1.7.3
 )
 ```
 
