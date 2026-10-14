@@ -1,10 +1,41 @@
 # Axelera Wingman Releases
 
+Axelera Wingman is an agentic AI platform for developing and running AI workloads
+on Axelera hardware with the Voyager SDK. The Linux desktop app brings SDK
+knowledge, model and pipeline workflows, and device execution into one workspace.
+
+## What Wingman adds
+
+- **Voyager knowledge and skills:** answers grounded in SDK documentation and
+  examples, with workflows to discover, adapt, compile, run, benchmark, and debug
+  models and pipelines.
+- **SDK and hardware readiness:** checks the workspace, SDK environment, and
+  accelerator capabilities before choosing how to build or run a workload.
+- **Device workflows:** prepares runnable pipeline packages, transfers them to
+  selected device targets, runs them, and brings logs and results back for review.
+- **Controls and evidence:** permission settings and action approvals, visible
+  agent activity, and result viewers that distinguish measured run outputs from
+  model reference figures.
+
+The desktop app uses the Code-OSS project behind VS Code as its editor foundation
+and OpenAI's Codex engine for agent execution. Axelera AI develops the Voyager
+integration, hardware workflows, and Wingman user experience described above.
+Bundled components retain their own licenses and copyright notices; the installed
+Linux package includes them under `/usr/share/doc/wingman/` and alongside the
+editor and engine components.
+
+## About this repository
+
 This repository is the release-only distribution point for Axelera Wingman.
 
 It contains release metadata only. GitHub source archives for tags in this
 repository contain this small metadata tree. Linux desktop packages, checksums,
 SBOMs, and release manifests are attached to GitHub Releases as assets.
+
+Axelera Wingman is distributed under Axelera AI's software license agreement.
+The application source is maintained internally and is not published in this
+repository. Bundled open-source components retain their own licenses and
+copyright notices.
 
 Current release tag: `v1.7.62`
 
@@ -109,7 +140,15 @@ attached to this Linux release.
 
 ## Support
 
-Report problems with the Linux app as issues in this repository; the Wingman
-team reads them. Questions and discussion belong on the Axelera community at
-https://community.axelera.ai/voyager-wingman-64. Security problems follow
-SECURITY.md and never go in a public issue.
+Use **Feedback** in the Wingman desktop app or [Wingman Chat](https://chat.wingman.axelera.ai).
+These are our preferred channels for bug reports, feature requests, and product
+feedback, and are monitored by the Wingman team.
+
+If you cannot open or sign in to either, email [support@axelera.ai](mailto:support@axelera.ai).
+Include your Wingman version, operating system, and steps to reproduce the issue.
+
+This repository is used for release distribution; product feedback is handled
+through the channels above. General questions and discussion are welcome on the
+[Axelera community](https://community.axelera.ai/voyager-wingman-64).
+Security problems follow [SECURITY.md](SECURITY.md). Do not post credentials,
+customer data, or exploit details publicly.
