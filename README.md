@@ -32,6 +32,11 @@ It contains release metadata only. GitHub source archives for tags in this
 repository contain this small metadata tree. Linux desktop packages, checksums,
 SBOMs, and release manifests are attached to GitHub Releases as assets.
 
+Axelera Wingman is distributed under Axelera AI's software license agreement.
+The application source is maintained internally and is not published in this
+repository. Bundled open-source components retain their own licenses and
+copyright notices.
+
 Current release tag: `v1.7.61`
 
 ## Install
@@ -135,7 +140,15 @@ attached to this Linux release.
 
 ## Support
 
-Report problems with the Linux app as issues in this repository; the Wingman
-team reads them. Questions and discussion belong on the Axelera community at
-https://community.axelera.ai/voyager-wingman-64. Security problems follow
-SECURITY.md and never go in a public issue.
+Use **Feedback** in the Wingman desktop app or [Wingman Chat](https://chat.wingman.axelera.ai).
+These are our preferred channels for bug reports, feature requests, and product
+feedback, and are monitored by the Wingman team.
+
+If you cannot open or sign in to either, email [support@axelera.ai](mailto:support@axelera.ai).
+Include your Wingman version, operating system, and steps to reproduce the issue.
+
+This repository is used for release distribution; product feedback is handled
+through the channels above. General questions and discussion are welcome on the
+[Axelera community](https://community.axelera.ai/voyager-wingman-64).
+Security problems follow [SECURITY.md](SECURITY.md). Do not post credentials,
+customer data, or exploit details publicly.
