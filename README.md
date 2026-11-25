@@ -37,7 +37,7 @@ The application source is maintained internally and is not published in this
 repository. Bundled open-source components retain their own licenses and
 copyright notices.
 
-Current release tag: `v1.8.3`
+Current release tag: `v1.8.4`
 
 ## Install
 
@@ -69,7 +69,7 @@ Open a bash terminal (the default on Ubuntu and Debian) and paste the whole bloc
   d=$(mktemp -d); chmod 755 "$d"; cd "$d"
   wingman_sudo apt-get update || echo "Some package sources could not be refreshed; continuing." >&2
   wingman_sudo apt-get install -y curl ca-certificates
-  v=1.8.3; a=$(dpkg --print-architecture)
+  v=1.8.4; a=$(dpkg --print-architecture)
   curl -fsSLO --retry 3 "https://github.com/axelera-ai-hub/wingman/releases/download/v$v/wingman_${v}_$a.deb"
   wingman_sudo apt-get install -y "./wingman_${v}_$a.deb"
   dpkg-query -W wingman
@@ -110,7 +110,7 @@ To check the release signature before anything is installed, paste this block in
   wingman_sudo apt-get install -y curl ca-certificates gnupg python3
 
   umask 077
-  version=1.8.3
+  version=1.8.4
   expected_fingerprint=6230D3CDBF7A0F3F60F72BDC75C0A17CBA2288F9
   base="https://github.com/axelera-ai-hub/wingman/releases/download/v$version"
   work_dir="$(mktemp -d)"
@@ -164,10 +164,10 @@ To check the release signature before anything is installed, paste this block in
 
 ## Assets
 
-Download the assets from the GitHub Release for `v1.8.3`.
+Download the assets from the GitHub Release for `v1.8.4`.
 
-- Linux Debian packages: `wingman_1.8.3_amd64.deb`,
-  `wingman_1.8.3_arm64.deb`
+- Linux Debian packages: `wingman_1.8.4_amd64.deb`,
+  `wingman_1.8.4_arm64.deb`
 - `install-wingman.sh`, `SHA256SUMS`, `SHA256SUMS.sig`,
   `axelera-wingman-release-public-key.asc`, `release-manifest.json`, and SBOM
 
